@@ -3,6 +3,7 @@ const reducer = (state = 0, action) => {
 
   switch (action.type) {
     case 'RND':
+      console.log(action.payload);
       return state + action.payload;
 
     case 'INC':

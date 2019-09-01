@@ -134,6 +134,24 @@ import { Switch } from 'react-router-dom'; служит для создания 
 
 --Redux--
 
+import { Provider } from 'react-redux';
+import {connect} from 'react-redux';
+
+<Provider></Provider> оборачивает приложение аналогично Context.Provider
+
+export default connect(mapStateToProps, mapActionsToProps)(Component); это всторенный
+компонент высшего порядка, реализующий Consumer для Redux.
+Component получит в props значения из store, преобразованные с помощью mapStateToProps.
+Component получит в props значения actionCreators, связанные с dispatch, преобразованные
+с помощью функции mapActionsToProps.
+Если вместо функции mapActionsToProps передать вторым аргументом в connect
+объект actions с actionCreators, то connect автоматически применит BindActionCreators и
+вернёт все actionCreators связанные c dispatch в props.
+
+import { bindActionCreators } from 'redux'; функция, которая связыват actionCreators с
+dispatch и возвращает объект с ключами, соответствующими именам actionCreators, но уже
+связанными с dispatch.
+
 
 
 

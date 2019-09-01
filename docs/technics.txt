@@ -18,5 +18,5 @@ Context
 defaultProps
 propTypes, библиотека prop-types, airbnb/prop-types
 Router (Route, Link, Redirect, Switch, match, history)
-Redux (BindActionCreators)
+Redux (BindActionCreators, connect)
 
